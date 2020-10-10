@@ -46,8 +46,7 @@ tokenized_words <-
 
 # The following function will create a nice chart showing data on the character
 # Example:
-create_character_charts("Chandler Bing")
-
+#create_character_charts("Chandler Bing")
 create_character_charts <- function(current_speaker) {
   
   character_tibble <- spoken_words_distribution %>% 
@@ -87,12 +86,15 @@ create_character_charts <- function(current_speaker) {
     geom_col(fill = saridr::sarid_colors$light_blue_gradient) + 
     ggtitle("Commonly used words") + 
     xlab("Number of appearances (in entire show)") + 
-    labs(caption = "based on data from tidytuesday, see: https://github.com/rfordatascience/tidytuesday")
+    labs(caption = "based on data from tidytuesday, see: https://github.com/rfordatascience/tidytuesday") + 
+    theme(axis.text.y = element_text(size = 10))
     
   
   (words_per_episode / words_distribution_plot) | (common_words_for_character)
   
 }
+
+create_character_charts("Chandler Bing")
 
 # Add the actual slides ----
 
