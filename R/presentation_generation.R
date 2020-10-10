@@ -9,14 +9,7 @@ library(patchwork)
 friends <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv')
 friends_info <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends_info.csv')
 
-
-
 # some function definitions
-# the location where the main figure will be
-main_content_location <- ph_location(left = 0.7/cm(1),
-                                     top = 4.52/cm(1),
-                                     height = 12.17/cm(1),
-                                     width = 32.61/cm(1))
 
 # plot themes
 theme_set(saridr::theme_sarid() + 
